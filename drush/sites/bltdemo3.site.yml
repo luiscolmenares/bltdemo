@@ -1,0 +1,6 @@
+local:
+    root: /var/www/bltdemo3/docroot
+    uri: 'http://local.bltdemo3.com'
+    host: local.bltdemo3.com
+    user: vagrant
+    ssh: { options: '-o StrictHostKeyChecking=no -o PasswordAuthentication=no -i $HOME/.vagrant.d/insecure_private_key' }
