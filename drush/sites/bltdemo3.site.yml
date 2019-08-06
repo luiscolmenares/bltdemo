@@ -4,3 +4,33 @@ local:
     host: local.bltdemo3.com
     user: vagrant
     ssh: { options: '-o StrictHostKeyChecking=no -o PasswordAuthentication=no -i $HOME/.vagrant.d/insecure_private_key' }
+# Application 'luisbltdemoblt', environment 'dev'.
+dev:
+  root: /var/www/html/luisbltdemoblt.dev/docroot
+  ac-site: luisbltdemoblt
+  ac-env: dev
+  ac-realm: devcloud
+  uri: luisbltdemobltkd7j7xnl57.devcloud.acquia-sites.com
+  dev.livedev:
+    parent: '@luisbltdemoblt.dev'
+    root: /mnt/gfs/luisbltdemoblt.dev/livedev/docroot
+  host: luisbltdemobltkd7j7xnl57.ssh.devcloud.acquia-sites.com
+  user: luisbltdemoblt.dev
+  paths:
+    drush-script: drush9
+
+
+# Application 'luisbltdemoblt', environment 'test'.
+test:
+  root: /var/www/html/luisbltdemoblt.test/docroot
+  ac-site: luisbltdemoblt
+  ac-env: test
+  ac-realm: devcloud
+  uri: luisbltdemobltph2cibljdj.devcloud.acquia-sites.com
+  test.livedev:
+    parent: '@luisbltdemoblt.test'
+    root: /mnt/gfs/luisbltdemoblt.test/livedev/docroot
+  host: luisbltdemobltph2cibljdj.ssh.devcloud.acquia-sites.com
+  user: luisbltdemoblt.test
+  paths:
+    drush-script: drush9
